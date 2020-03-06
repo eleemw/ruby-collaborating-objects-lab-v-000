@@ -22,11 +22,11 @@ class Artist
     @@all << self
   end
 
-  # def self.create(name)
-  #   artist = self.new(name)
-  #   artist.save
-  #   artist
-  # end
+  def self.create(name)
+    artist = self.new(name)
+    artist.save
+    artist
+  end
 
   def self.find(name)
     self.all.detect {|artist| artist.name == name}
